@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class SimpleMathTest {
 
     @Test
-    void testSum() {
+    void testSimpleMathSum() {
         // given(instanciar a classe)
         SimpleMath simpleMath = new SimpleMath();
 
@@ -19,17 +19,33 @@ class SimpleMathTest {
 
     }
 
+
+
     @Test
-    void testFaill() {
+    void testSimpleMathSubtraction() {
         // given(instanciar a classe)
         SimpleMath simpleMath = new SimpleMath();
+
         // when
-        Double result = simpleMath.sum(6.2D, 2D);
-        Double expected = 8.2D;
+        Double result = simpleMath.subtraction(6.2D, 2D);
+
         //then
-        Assertions.assertEquals(expected, result);
+        Assertions.assertEquals(4.2D, result, "TEST Subtraction PASSED");
 
     }
 
+
+    @Test
+    void testSimpleMathMultiplication() {
+        // given(instanciar a classe)
+        SimpleMath simpleMath = new SimpleMath();
+
+        // when
+        Double result = simpleMath.multiplication(6D, 2D);
+
+        //then
+        Assertions.assertEquals(12D, result, "TEST Multiplication PASSED");
+
+    }
 
 }
