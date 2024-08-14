@@ -5,27 +5,21 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class SimpleMathTest {
+    SimpleMath simpleMath = new SimpleMath();
 
     @Test
     void testSimpleMathSum() {
-        // given(instanciar a classe)
-        SimpleMath simpleMath = new SimpleMath();
-
         // when
         Double result = simpleMath.sum(6.2D, 2D);
-
+        Double Esperado = 8.2D;
         //then
-        Assertions.assertEquals(8.2D, result, "TEST SUN PASSED");
+        Assertions.assertEquals(Esperado, result, "TEST SUN PASSED");
 
     }
 
 
-
     @Test
     void testSimpleMathSubtraction() {
-        // given(instanciar a classe)
-        SimpleMath simpleMath = new SimpleMath();
-
         // when
         Double result = simpleMath.subtraction(6.2D, 2D);
 
@@ -37,9 +31,6 @@ class SimpleMathTest {
 
     @Test
     void testSimpleMathMultiplication() {
-        // given(instanciar a classe)
-        SimpleMath simpleMath = new SimpleMath();
-
         // when
         Double result = simpleMath.multiplication(6D, 2D);
 
@@ -48,4 +39,37 @@ class SimpleMathTest {
 
     }
 
+    //    Testes de Falhas
+    @Test
+    void testFaillSimpleMathSum() {
+        // when
+        Double result = simpleMath.sum(6.2D, 2D);
+        Double Esperado = 8.2D;
+        //then
+        Assertions.assertEquals(Esperado, result, "TEST SUN PASSED");
+
+    }
+
+
+    @Test
+    void testFaillSimpleMathSubtraction() {
+        // when
+        Double result = simpleMath.subtraction(6.2D, 2D);
+
+        //then
+        Assertions.assertEquals(4.2D, result, "TEST Subtraction PASSED");
+
+    }
+
+
+    @Test
+    void testFaillSimpleMathMultiplication() {
+        // when
+        Double result = simpleMath.multiplication(6D, 2D);
+
+        //then
+        Assertions.assertEquals(12D, result, "TEST Multiplication PASSED");
+
+
+    }
 }
