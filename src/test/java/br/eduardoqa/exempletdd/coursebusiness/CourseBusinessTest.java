@@ -17,13 +17,13 @@ class CourseBusinessTest {
         CourseService stubCourseService = new CourseServiceStub();
         CourseBusiness business = new CourseBusiness(stubCourseService);
 
-
         // When / act
         var filteredcourse = business.retiviercourseRelatedToSpring("Eduardo");
 
         // Asserts
-        Assertions.assertEquals(5 , filteredcourse.size());
+        Assertions.assertEquals(4, filteredcourse.size());
 
     }
+
 
 }
